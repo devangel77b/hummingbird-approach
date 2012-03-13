@@ -1,0 +1,88 @@
+\documentclass{rspublic}
+
+% For revision control
+\usepackage{rcs-multi}
+\rcsid{$Id$}
+\rcsid{$Header$}
+\rcskwsave{$Author$}
+\rcskwsave{$Date$} 
+\rcskwsave{$Revision$}
+%%\rcsRegisterAuthor{devangel}{Dennis Jos{\'e} Evangelista}
+\rcsRegisterAuthor{devangel}{Dennis J. Evangelista}
+\rcsRegisterAuthor{mbadger}{Marc Badger}
+\rcsRegisterAuthor{nsapir}{Nir Sapir}
+
+% I typically use these
+\usepackage{graphicx}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{makeidx}
+\usepackage{siunitx}
+
+% PDF metadata
+% not compatible with rsauthor!!!
+%\usepackage{hyperref}
+%\hypersetup{pdftitle={Aerodynamics of display dives in Anna's Hummingbirds}}
+%\hypersetup{pdfauthor={Dennis J. Evangelista and Christopher J. Clark}}
+%\hypersetup{pdfsubject={biomechanics}}
+%\hypersetup{pdfkeywords={biomechanics, Anna's hummingbird, \emph{Calypte anna}, dive, display}}
+%\hypersetup{colorlinks=true,citecolor=Violet,linkcolor=Blue,urlcolor=Red}
+
+% Biology style references
+\usepackage[round]{natbib}
+\setcitestyle{authoryear, round, comma, aysep={;}, yysep={,}, notesep={, }}
+\bibliographystyle{rspublicnat}
+
+% Figures at end for draft
+%\usepackage[lists,tablesfirst]{endfloat}
+
+% Genus and species names
+\newcommand{\Calypteanna}{\emph{Calypte anna}}
+\newcommand{\Canna}{\emph{C.\ anna}}
+
+
+
+
+
+% Title block information
+\begin{document}
+\title[Anna's Hummingbird approach kinematics]{Large area kinematics of the approach to a feeder in Anna's Hummingbirds (\Calypteanna)}
+\author[M. Badger, D. Evangelista, and N. Sapir]{Marc Badger, Dennis Evangelista, and Nir Sapir}
+\affiliation{University of California, Berkeley, Berkeley, CA, USA}
+\date{\today}
+\label{firstpage}
+\maketitle
+
+
+\begin{abstract}{biomechanics, maneuvering, kinematics, Calypte anna, hummingbird}
+Blah blah blah notionally targeted at Proc R Soc Lond B. 
+\end{abstract}
+
+
+
+%\jname{Proc.\ R.\ Soc.\ B}
+%\jdoi{doi:10.1098/rspb}
+
+\section{Introduction}
+\section{Methods and materials}
+%\subsection{Animals}
+Wild, free-ranging Anna's Hummingbirds (\Calypteanna) were observed approaching a hummingbird feeder suspended in an open air courtyard (\ang{37;52;17}N \ang{122;15;43}W) from a balcony railing \SI{3}{\meter} above ground.  The feeder was kept in place for one week before the start of filming. Approaches were filmed in natural daylight between 9:00 AM and 5:00 PM local time (GMT - \SI{7}{\hour}) between March and May 2012.  All observations were in accordance with approved UC Berkeley Animal Care and Use Committee (ACUC) protocols.  
+
+%\subsection{Filming and camera calibration}
+Birds were filmed using up to six Flip HD \SI{60}{fps} \SI{720}{p} video cameras (Cisco, San Francisco, CA) mounted on tripods located to broadly cover the approach to the feeder. Cameras were time-synchronized through use of a clapboard visible in all camera views.  Camera calibration data (position, rotation, focal length and distortion coefficients) were determined by filming a \SI{100x70}{\centi\meter} checkerboard calibration pattern printed on a standard foam core board and using the camera calibration routines provided in OpenCV \citep{OpenCV, Bradski:2008}. 
+
+%\subsection{Kinematics}
+The bird's approach to the feeder was digitized using (something) to obtain two-dimensional (2D) pixel position of the bird in all views.  A Python script (TBD) was then used along with the camera calibration data and the 2D positions in each view to locate the bird in three dimensions (3D) and estimate speed and acceleration. The details of this step (will be given somewhere else?)    
+
+Subsequent statistical analyses were carried out in R \citep{R}. 
+
+\section{Results}
+\section{Discussion}
+
+
+\begin{acknowledgements}
+We thank Robert Dudley.
+\end{acknowledgements}
+
+\bibliography{references/calypte-approach}
+\label{lastpage}
+\end{document}
